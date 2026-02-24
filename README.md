@@ -1,16 +1,43 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Thông tin chung
+- **Công nghệ sử dụng**:
+  - React (Vite)
+  - React Router DOM (định tuyến trang)
+  - Bootstrap + React Bootstrap 
+  - localStorage (lưu trữ dữ liệu tạm thời)
 
-Currently, two official plugins are available:
+- **Tính năng hiện tại**:
+  - Xem danh sách sinh viên
+  - Thêm sinh viên mới
+  - Chỉnh sửa sinh viên
+  - Xóa sinh viên
+  - Validation cơ bản
+  - Conditional & List rendering
+  - useState, useEffect
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tiến độ hàng ngày
 
-## React Compiler
+### Ngày 1: Setup project và chạy được ứng dụng cơ bản
+**Hoạt động chính**:
+- Cài đặt Node.js, Git, VS Code
+- Tạo project React bằng Vite: `npm create vite@latest . -- --template react`
+- Cài dependencies cơ bản
+- Chạy thành công `npm run dev` → hiển thị trang mặc định Vite + React tại http://localhost:5174
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**Kết quả**:
+- Project chạy ổn định
+- Folder cấu trúc chuẩn: src/, public/, vite.config.js, package.json
 
-## Expanding the ESLint configuration
+### Thêm React Router và navigation cơ bản
+**Hoạt động chính**:
+- Cài thêm package: `npm install react-router-dom bootstrap react-bootstrap`
+- Chỉnh sửa `src/App.jsx`: Thêm Router, Routes, Link để tạo navigation (Danh sách / Thêm mới)
+- Thêm Bootstrap CSS (`import 'bootstrap/dist/css/bootstrap.min.css'`)
+- Tạo cấu trúc giao diện cơ bản với tiêu đề và nút chuyển trang
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+**Kết quả**:
+- Trang có tiêu đề "Quản lý Sinh viên (LocalStorage)"
+- Có 2 nút: "Danh sách sinh viên" và "Thêm sinh viên "
+- Chuyển trang không reload (sử dụng React Router)
+- Giao diện bắt đầu đẹp hơn nhờ Bootstrap
+
